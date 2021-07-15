@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/frames/wall_mid.png" type="Texture" id=2]
+
+[node name="LevelDesign" type="Node2D"]
+
+[node name="BG" type="ParallaxBackground" parent="."]
+follow_viewport_enable = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+z_index = -1
+
+[node name="TextureRect" type="TextureRect" parent="BG/ParallaxLayer"]
+margin_top = 1.40613
+margin_right = 256.0
+margin_bottom = 151.406
+rect_scale = Vector2( 4, 4 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}

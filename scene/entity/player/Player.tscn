@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/anim/PlayerIdle.tres" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.48803, 10 )
+
+[node name="Player" type="KinematicBody2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0282307, 9.53674e-07 )
+shape = SubResource( 1 )
+
+[node name="PlayerSprite" type="Sprite" parent="."]
+position = Vector2( 0.26215, -3.81124 )
+scale = Vector2( 0.979835, 0.979835 )
+texture = ExtResource( 5 )
+
+[node name="AudioStream" type="AudioStreamPlayer2D" parent="."]

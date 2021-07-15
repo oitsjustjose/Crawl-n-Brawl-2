@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="SegmentShape2D" id=1]
+b = Vector2( 0, 600 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 1024, 0 )
+b = Vector2( 1024, 600 )
+
+[sub_resource type="SegmentShape2D" id=3]
+b = Vector2( 1024, 0 )
+
+[sub_resource type="SegmentShape2D" id=4]
+a = Vector2( 0, 600 )
+b = Vector2( 1024, 600 )
+
+[node name="Boundary" type="Node2D"]
+position = Vector2( 0.839355, 0 )
+
+[node name="LeftWindowBorder" type="StaticBody2D" parent="."]
+position = Vector2( 0.487518, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWindowBorder"]
+shape = SubResource( 1 )
+
+[node name="RightWindowBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWindowBorder"]
+shape = SubResource( 2 )
+
+[node name="TopWindowBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWindowBorder"]
+shape = SubResource( 3 )
+
+[node name="BottomWindowBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWindowBorder"]
+shape = SubResource( 4 )
